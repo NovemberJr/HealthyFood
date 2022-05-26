@@ -1,14 +1,344 @@
-$bg: #ff0;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,700;1,700&family=Jost:wght@400;500&display=swap');
 
-body {
-    background-color: #fff;
+$green: #27300F;
+$orange: #D26A22;
+$white: #FFFFFF;
+
+$font-cormorant: 'Cormorant', sans-serif; 
+$font-jost: 'Jost', sans-serif;
+
+html {
+    font-size: 10px;
 }
-.box {
-    &__chart {
-        max-width: 300px;
+body {
+    font-size: 1.6rem;
+    font-family: $font-jost;
+}
+
+.header {
+    max-width: 1440px;
+    margin: 0 auto 5rem;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4rem;
+    &__nav {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding-left: 0;
+        gap: 4.8rem;
     }
-    &__svg {
-        fill: greenyellow;
-        max-width: 300px;
+    &__link {
+        color: $green;
+        text-decoration: none;
+        &:hover {
+            color: $orange;
+        }
     }
+    &__tel {
+        color: $green;
+        text-decoration: none;
+        font-weight: 500;
+        &:hover {
+            color: $orange;
+        }
+    }
+    &__cart {
+        display: block;
+        width: 3.8rem;
+        height: 3.8rem;
+        border-radius: 100%;
+        background-color: $orange;
+        background-image: url('../images/cart.svg');
+        background-repeat: no-repeat;
+        background-size: 1.7rem 1.5rem;
+        background-position: center center;
+        position: relative;
+        border: 1px solid $orange;
+        cursor: pointer;
+        &:hover {
+            background-color: $green;
+            border-color: $green;
+        }
+    }
+    &__counter {
+        font-size: .8rem;
+        color: $white;
+        position: absolute;
+        top: .5rem;
+        right: .7rem;
+    }
+}
+.logo {
+    display: block;
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 12rem;
+    height: 3.2rem;
+}
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.main {
+    background-image: url(../images/main.png);
+    background-image: url(../images/background\ 1\ sreen.png);
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    padding-bottom: 63px;
+    &__item {
+        margin-left: 12rem;
+        max-width: 37.8rem;
+        margin-top: 6rem;
+    }
+    &__link {
+        margin-top: 5.5rem;
+    }
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+    &__cover {
+        flex-basis: 763px;
+        height: 763px;
+        border: 1px solid rgba($green, 0.4);
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    &__line {
+        width: 658px;
+        height: 658px;
+        border: 1px solid rgba($green, 0.4);
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__image {
+        width: 92%;
+    }
+    &__btn {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        color: #27300F;
+        position: absolute;
+        line-height: 1.5;
+        cursor: pointer;
+        &:hover {
+            &::before {
+                background-color: $orange;
+                box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
+            }
+        }
+        &::before {
+            content: '';
+            border-radius: 100%;
+            background-color: $green;
+            box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
+            width: 11px;
+            height: 11px;
+            position: absolute;
+        }
+        &_1 {
+            top: 43px;
+            left: 65px;
+            &::before {
+                top: 24px;
+                right: -36px;
+            }
+        }
+        &_2 {
+            top: 190px;
+            right: 3px;
+            &::before {
+                top: 20px;
+                left: -26px;
+            }   
+        }
+        &_3 {
+            bottom: -49px;
+            right: 249px;  
+            &::before {
+                top: -20px;
+                left: 17px;    
+            }
+        }
+    }
+    &__food {
+        display: block;
+        color: rgba($green, 0.4);
+    }
+    &__cucumber {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 750px;
+    }
+    &__avocado {
+        position: absolute;
+        z-index: -1;
+        top: 47px;
+        right: 0;
+    }
+    &__pepper {
+        position: absolute;
+        z-index: -1;
+        top: 398px;
+        left: 65px;
+    }
+    &__beans {
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+    }
+    &__tomato {
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        right: 140px;
+        /*width: 11rem;
+        height: 11rem;*/
+    }
+}
+.offer {
+    background-image: url(../images/background\ 2\ sreen.png);
+    background-size: cover;
+    /*background-position: center;*/
+    background-repeat: no-repeat;
+    padding-bottom: 200px;
+    &__text {
+        margin-top: 6rem;
+        max-width: 700px;
+    }
+    &__slider {
+        overflow: hidden;
+        padding-top: 100px;
+    }
+}
+.swiper {
+    overflow: initial;
+    &-slide {
+        height: 52rem;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 1px solid black;
+        border-radius: 2rem;
+        box-sizing: border-box;
+        padding: 40px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+
+        &__title {
+            font-family: $font-cormorant;
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+        &__text {
+            font-size: 16px;
+            line-height: 1.5;
+            max-width: 280px;
+            margin-top: 24px;
+            margin-bottom: 0;
+        }
+        &__link {
+            font-weight: 700;
+            letter-spacing: .15rem;
+            color: #000;
+            opacity: .8;
+            transition: .3s;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-top: 35px;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        &__plus {
+            width: 30px;
+        }
+        &:hover {
+            /*border: 4px solid black;*/
+        }
+        &_milk {
+            background-image: url(../images/milk.png);
+        }
+        &_pasta {
+            background-image: url(../images/pasta.png);
+        }
+        &_meat {
+            background-image: url(../images/meat.png);
+        }
+    }
+    &-pagination {
+        display: none;
+    }
+    &-button-prev, &-button-next {
+        top: -60px;
+        color: #000;
+        transform: scale(0.5);
+    }
+    &-button-next {
+        right: -8px;
+    }
+    &-button-prev {
+        left: initial;
+        right: 74px;
+    }
+}
+.title {
+    font-family: $font-cormorant;
+    font-weight: 700;
+    font-size: 8rem;
+    color: $green;
+    line-height: 1;
+    margin: 0;
+    max-width: 50rem;
+    &__span {
+        font-style: italic;
+    }
+    &_block {
+        .title__span {
+            /*display: block;*/
+        }
+    }
+}
+.description {
+    margin: 0;
+    line-height: 1.5;
+    &_size_s {
+        font-size: 1.8rem;
+    }
+    &_size_m {
+        font-size: 2.4rem;
+    }
+}
+.link {
+    color: $white;
+    text-transform: uppercase;
+    padding: 2.3rem 4.2rem;
+    background-color: $orange;
+    box-shadow: 0px 1rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
+    text-decoration: none;
+    border-radius: 3.8rem;
+    display: inline-block;
 }
