@@ -10,13 +10,13 @@
     <div class="main">
         <header class="header">
             <a class="logo" href="#"></a>
-            <nav>
+            <nav class="header__navigation">
                 <ul class="header__nav">
                     <li class="header__item">
-                        <a class="header__link" href="#">Наша продукция</a>
+                        <a class="header__link" href="#">Наша&nbsp;продукция</a>
                     </li>
                     <li class="header__item">
-                        <a class="header__link" href="#">О компании</a>
+                        <a class="header__link" href="#">О&nbsp;компании</a>
                     </li>
                     <li class="header__item">
                         <a class="header__link" href="#">Новинки</a>
@@ -33,9 +33,18 @@
                 </ul>
             </nav>
             <a href="tel:+79453425555" class="header__tel">+7 945 342 55 55</a>
-            <button class="header__cart">
-                <span class="header__counter">0</span>
-            </button>
+            <div class="header__buttons">
+                <a href="tel:+79453425555" class="header__phone"></a>
+                <button class="header__menu"></button>
+                <button class="header__cart">
+                    <span class="header__counter">0</span>
+                    <div class="popup popup_visible">
+                        <img class="popup__image" src="./images/catalog/milk.png">
+                        <p class="popup__text">Вы добавили в корзину <span class="popup__text_underline">Молоко&nbsp;топленое</span></p>
+                        <div class="popup__close"></div>
+                    </div>
+                </button>
+            </div>
         </header>
         <div class="container">
             <div class="main__flex">
@@ -49,7 +58,7 @@
                             Сеть магазинов полезных продуктов питания, производство которых основано на&nbsp;принципах и стандартах органически чистых продуктов
                         </p>
                         <div class="main__link">
-                            <a href="#" class="link">Перейти в каталог</a>
+                            <a href="#catalog" class="link">Перейти в каталог</a>
                         </div>
                     </div>
                 </div>
@@ -58,12 +67,30 @@
                         <img class="main__image" src="./images/cover.png" alt="">
                         <button class="main__btn main__btn_1" type="button">
                             <span class="main__food">Авокадо</span>134 руб
+                            <div class="popup">
+                                <h3 class="popup__title">Авокадо</h3>
+                                <p class="popup__desc">Картофель Молодой, Свежий урожай, 1кг</p>
+                                <p class="popup__price">134 руб/шт</p>
+                                <div class="popup__close"></div>
+                            </div>
                         </button>
                         <button class="main__btn main__btn_2" type="button">
                             <span class="main__food">Картофель</span>169 руб
+                            <div class="popup">
+                                <h3 class="popup__title">Картофель</h3>
+                                <p class="popup__desc">Картофель Молодой, Свежий урожай, 1кг</p>
+                                <p class="popup__price">169 руб/кг</p>
+                                <div class="popup__close"></div>
+                            </div>
                         </button>
                         <button class="main__btn main__btn_3" type="button">
                             <span class="main__food">Томаты</span>215 руб
+                            <div class="popup">
+                                <h3 class="popup__title">Томаты</h3>
+                                <p class="popup__desc">Картофель Молодой, Свежий урожай, 1кг</p>
+                                <p class="popup__price">215 руб/кг</p>
+                                <div class="popup__close"></div>
+                            </div>
                         </button>
                     </div>
                 </div>
@@ -87,42 +114,45 @@
                     Органика &mdash; это целостная система производства по-настоящему чистой, натуральной и полезной продукции
                 </p>
             </div>
-            <div class="offer__slider">
+            <div class="slider">
                 <div class="swiper offerSwiper">
                     <div class="swiper-wrapper">
-                      <div class="swiper-slide swiper-slide_milk">
+                      <div class="swiper-slide swiper-slide_white swiper-slide_milk">
                           <h3 class="swiper-slide__title">
                             Молочные продукты
                           </h3>
-                          <p class="swiper-slide__text">
-                            В наше время появилась мода на&nbsp;здоровое питание, поэтому на&nbsp;рынке питания разработали органическое молоко. Органическое молоко является продуктом органического животноводства
-                          </p>
-                          <a class="swiper-slide__link" href="#"><img class="swiper-slide__plus" src="images/plus.svg">Подробнее</a>
+                          <div class="swiper-slide__hover">
+                            <p class="swiper-slide__text">
+                                В наше время появилась мода на&nbsp;здоровое питание, поэтому на&nbsp;рынке питания разработали органическое молоко. Органическое молоко является продуктом органического животноводства
+                            </p>
+                            <a class="swiper-slide__link" href="#">Подробнее</a>
+                          </div>
                       </div>
-                      <div class="swiper-slide swiper-slide_pasta">
+                      <div class="swiper-slide swiper-slide_white swiper-slide_pasta">
                         <h3 class="swiper-slide__title">
                             Бакалея
                           </h3>
-                          <p class="swipe-slider__text">
-                            
-                          </p>
-                          <a class="swiper-slide__link" href="#">Подробнее</a>
+                          <div class="swiper-slide__hover">
+                            <p class="swipe-slider__text">
+                                В наше время появилась мода на&nbsp;здоровое питание, поэтому на&nbsp;рынке питания разработали органическое молоко. Органическое молоко является продуктом органического животноводства
+                            </p>
+                            <a class="swiper-slide__link" href="#">Подробнее</a>
+                          </div>
                       </div>
-                      <div class="swiper-slide swiper-slide_meat">
+                      <div class="swiper-slide swiper-slide_white swiper-slide_meat">
                         <h3 class="swiper-slide__title">
                             Мясо, птица
                           </h3>
-                          <p class="swipe-slider__text">
-                            
-                          </p>
-                          <a class="swiper-slide__link" href="#">Подробнее</a>
+                          <div class="swiper-slide__hover">
+                              <p class="swipe-slider__text">
+                                В наше время появилась мода на&nbsp;здоровое питание, поэтому на&nbsp;рынке питания разработали органическое молоко. Органическое молоко является продуктом органического животноводства
+                              </p>
+                              <a class="swiper-slide__link" href="#">Подробнее</a>
+                          </div>
                       </div>
                       <div class="swiper-slide">Slide 4</div>
                       <div class="swiper-slide">Slide 5</div>
                       <div class="swiper-slide">Slide 6</div>
-                      <div class="swiper-slide">Slide 7</div>
-                      <div class="swiper-slide">Slide 8</div>
-                      <div class="swiper-slide">Slide 9</div>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
@@ -131,5 +161,422 @@
             </div>
         </div>
     </section>
+    <section class="about">
+        <div class="container">
+            <h1 class="title">
+                В чём наша <span class="title__span">уникальность</span>
+            </h1>
+            <div class="about__box">
+                <div class="about__text">
+                    <p class="description description_size_s">
+                        Мы полностью контролируем весь цикл производства - от&nbsp;поля до&nbsp;прилавка за&nbsp;счёт собственной серьёзной материальной и научной базы. Наш подход направлен на высокие технологии и достижения научного прогресса.
+                    </p>
+                </div>
+                <ul class="about__list">
+                    <li class="about__item">Здоровье</li>
+                    <li class="about__item">Традиции</li>
+                    <li class="about__item">Вкус</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="trends">
+        <div class="container">
+            <h1 class="title">
+                Наши <span class="title__span">новинки</span>
+            </h1>
+            <div class="trends__text">
+                <p class="description description_size_m">
+                    Будь в тренде с современным миром, и будь здоров вместе с нами
+                </p>
+            </div>
+            <div class="slider">
+                <div class="swiper trendsSwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="swiper-slide__cover">
+                            <img src="images/catalog/milk.png" alt="milk">
+                        </div>
+                        <h3 class="swiper-slide__title">
+                            Молоко топленое
+                        </h3>
+                        <p class="swiper-slide__text">
+                            Молоко Healthy food топленое мдж 4% 500гр
+                        </p>
+                        <p class="swiper-slide__price">
+                            159 руб/шт
+                        </p>
+                        <div class="swiper-slide__footer">
+                            <div class="counter">
+                                <button class="counter__btn counter__minus"></button>
+                                <input class="counter__input" type="text" value="0">
+                                <button class="counter__btn counter__plus"></button>
+                            </div>
+                            <button class="swiper-slide__add">В корзину</button>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-slide__cover">
+                            <img src="images/catalog/egg.png" alt="egg">
+                        </div>
+                        <h3 class="swiper-slide__title">
+                            Яйцо перепелиное
+                        </h3>
+                        <p class="swiper-slide__text">
+                            QEGG Яйцо перепелиное 20шт
+                        </p>
+                        <p class="swiper-slide__price">
+                            94 руб/упак
+                        </p>
+                        <div class="swiper-slide__footer">
+                            <div class="counter">
+                                <button class="counter__btn counter__minus"></button>
+                                <input class="counter__input" type="text" value="0">
+                                <button class="counter__btn counter__plus"></button>
+                            </div>
+                            <button class="swiper-slide__add">В корзину</button>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-slide__cover">
+                            <img src="images/catalog/chicken.png" alt="chicken">
+                        </div>
+                        <h3 class="swiper-slide__title">
+                            Куриное филе Оссобуко
+                        </h3>
+                        <p class="swiper-slide__text">
+                            Куриное филе Оссобуко (Ангус) охл скин. В вакуумной упаковке
+                        </p>
+                        <p class="swiper-slide__price">
+                            1009 руб/кг
+                        </p>
+                        <div class="swiper-slide__footer">
+                            <div class="counter">
+                                <button class="counter__btn counter__minus"></button>
+                                <input class="counter__input" type="text" value="0">
+                                <button class="counter__btn counter__plus"></button>
+                            </div>
+                            <button class="swiper-slide__add">В корзину</button>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">Slide 4</div>
+                      <div class="swiper-slide">Slide 5</div>
+                      <div class="swiper-slide">Slide 6</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+            </div>
+        </div>
+    </section>
+    <main class="catalog" id="catalog">
+        <div class="container">
+            <h1 class="title">Каталог</h1>
+            <div class="trends__text">
+                <p class="description description_size_m">
+                    Еда которая заботится о вашей фигуре
+                </p>
+            </div>
+            <ul class="category">
+                <li><a class="category__link" href="#">Молочные продукты</a></li>
+                <li><a class="category__link" href="#">Бакалея</a></li>
+                <li><a class="category__link" href="#">Мясо, птица</a></li>
+                <li><a class="category__link" href="#">Детям</a></li>
+                <li><a class="category__link" href="#">Овощи и фрукты</a></li>
+            </ul>
+            <div class="catalog-grid">
+                <div class="catalog-grid__item">
+                    <div class="catalog-grid__cover">
+                        <img class="catalog-grid__image" src="images/catalog/milk.png" alt="milk">
+                    </div>
+                    <h3 class="catalog-grid__title">
+                        Молоко топленое
+                    </h3>
+                    <p class="catalog-grid__description">
+                        Молоко Healthy food топленое мдж 4% 500г
+                    </p>
+                    <p class="catalog-grid__price">
+                        159 руб/шт
+                    </p>
+                    <div class="catalog-grid__footer">
+                        <div class="counter">
+                            <button class="counter__btn counter__minus"></button>
+                            <input class="counter__input" type="text" value="1">
+                            <button class="counter__btn counter__plus"></button>
+                        </div>
+                        <button class="catalog-grid__add">В корзину</button>
+                    </div>
+                </div>
+                <div class="catalog-grid__item">
+                    <div class="catalog-grid__cover">
+                        <img class="catalog-grid__image" src="images/catalog/yogurt1.png" alt="yogurt">
+                    </div>
+                    <h3 class="catalog-grid__title">
+                        Йогурт с черникой
+                    </h3>
+                    <p class="catalog-grid__description">
+                        Йогурт Healthy food с черникой питьевой 1.5% 750г
+                    </p>
+                    <p class="catalog-grid__price">
+                        89 руб/шт
+                    </p>
+                    <div class="catalog-grid__footer">
+                        <div class="counter">
+                            <button class="counter__btn counter__minus"></button>
+                            <input class="counter__input" type="text" value="1">
+                            <button class="counter__btn counter__plus"></button>
+                        </div>
+                        <button class="catalog-grid__add">В корзину</button>
+                    </div>
+                </div>
+                <div class="catalog-grid__item">
+                    <div class="catalog-grid__cover">
+                        <img class="catalog-grid__image" src="images/catalog/curd.png" alt="yogurt">
+                    </div>
+                    <h3 class="catalog-grid__title">
+                        Творог
+                    </h3>
+                    <p class="catalog-grid__description">
+                        Творог Healthy food рассыпчатый 9% 350г
+                    </p>
+                    <p class="catalog-grid__price">
+                        216 руб/шт
+                    </p>
+                    <div class="catalog-grid__footer">
+                        <div class="counter">
+                            <button class="counter__btn counter__minus"></button>
+                            <input class="counter__input" type="text" value="1">
+                            <button class="counter__btn counter__plus"></button>
+                        </div>
+                        <button class="catalog-grid__add">В корзину</button>
+                    </div>
+                </div>
+                <div class="catalog-grid__item">
+                    <div class="catalog-grid__cover">
+                        <img class="catalog-grid__image" src="images/catalog/mozarella.png" alt="yogurt">
+                    </div>
+                    <h3 class="catalog-grid__title">
+                        Моцарелла
+                    </h3>
+                    <p class="catalog-grid__description">
+                        Моцарелла Healthy food 45% 0.125 кг
+                    </p>
+                    <p class="catalog-grid__price">
+                        359 руб/шт
+                    </p>
+                    <div class="catalog-grid__footer">
+                        <div class="counter">
+                            <button class="counter__btn counter__minus"></button>
+                            <input class="counter__input" type="text" value="1">
+                            <button class="counter__btn counter__plus"></button>
+                        </div>
+                        <button class="catalog-grid__add">В корзину</button>
+                    </div>
+                </div>
+                <div class="catalog-grid__item">
+                    <div class="catalog-grid__cover">
+                        <img class="catalog-grid__image" src="images/catalog/butter.png" alt="yogurt">
+                    </div>
+                    <h3 class="catalog-grid__title">
+                        Масло сливочное
+                    </h3>
+                    <p class="catalog-grid__description">
+                        Масло Healthy food сливочное 82.5% 200 г
+                    </p>
+                    <p class="catalog-grid__price">
+                        139 руб/шт
+                    </p>
+                    <div class="catalog-grid__footer">
+                        <div class="counter">
+                            <button class="counter__btn counter__minus"></button>
+                            <input class="counter__input" type="text" value="1">
+                            <button class="counter__btn counter__plus"></button>
+                        </div>
+                        <button class="catalog-grid__add">В корзину</button>
+                    </div>
+                </div>
+                <div class="catalog-grid__item">
+                    <div class="catalog-grid__cover">
+                        <img class="catalog-grid__image" src="images/catalog/yogurt2.png" alt="yogurt">
+                    </div>
+                    <h3 class="catalog-grid__title">
+                        Йогурт термостатный
+                    </h3>
+                    <p class="catalog-grid__description">
+                        Йогурт Healthy food термостатный с фруктово-ягодным 2.5% 165 г
+                    </p>
+                    <p class="catalog-grid__price">
+                        159 руб/шт
+                    </p>
+                    <div class="catalog-grid__footer">
+                        <div class="counter">
+                            <button class="counter__btn counter__minus"></button>
+                            <input class="counter__input" type="text" value="1">
+                            <button class="counter__btn counter__plus"></button>
+                        </div>
+                        <button class="catalog-grid__add">В корзину</button>
+                    </div>
+                </div>
+                <div class="catalog-grid__item">
+                    <div class="catalog-grid__cover">
+                        <img class="catalog-grid__image" src="images/catalog/cheese.png" alt="yogurt">
+                    </div>
+                    <h3 class="catalog-grid__title">
+                        Сыр
+                    </h3>
+                    <p class="catalog-grid__description">
+                        Сыр Healthy food Сливочный 45% 200 г
+                    </p>
+                    <p class="catalog-grid__price">
+                        559 руб/шт
+                    </p>
+                    <div class="catalog-grid__footer">
+                        <div class="counter">
+                            <button class="counter__btn counter__minus"></button>
+                            <input class="counter__input" type="text" value="1">
+                            <button class="counter__btn counter__plus"></button>
+                        </div>
+                        <button class="catalog-grid__add">В корзину</button>
+                    </div>
+                </div>
+                <div class="catalog-grid__item">
+                    <div class="catalog-grid__cover">
+                        <img class="catalog-grid__image" src="images/catalog/sauce.png" alt="yogurt">
+                    </div>
+                    <h3 class="catalog-grid__title">
+                        Соус для салата
+                    </h3>
+                    <p class="catalog-grid__description">
+                        Соус для салата Healthy food пикантный 4% 70 г
+                    </p>
+                    <p class="catalog-grid__price">
+                        59 руб/шт
+                    </p>
+                    <div class="catalog-grid__footer">
+                        <div class="counter">
+                            <button class="counter__btn counter__minus"></button>
+                            <input class="counter__input" type="text" value="1">
+                            <button class="counter__btn counter__plus"></button>
+                        </div>
+                        <button class="catalog-grid__add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <button class="loadmore">Загрузить еще</button>
+        </div>
+    </main>
+    <section class="shipping">
+        <div class="container">
+            <h1 class="title title_nowrap">
+                Доставка и <span class="title__span">оплата</span>
+            </h1>
+            <div class="shipping__flex">
+                <div class="shipping__text1">
+                    <p class="description description_size_s">
+                        Мы доставляем ваши заказы курьером в специально оборудованном транспорте.
+                    </p>
+                    <p class="description description_size_s">
+                        <br>
+                    </p>
+                    <p class="description description_size_s">
+                        Компания Healthy food предлагает самые удобные и быстрые способы доставки по&nbsp;всей стране. Посмотреть подробные условия и географию вы можете по&nbsp;этой <a class="shipping__link" href="#">ссылке</a>
+                    </p>
+                </div>
+                <div class="shipping__text2">
+                    <p class="description description_size_s">
+                        Вы можете оплатить заказ наличными или картой курьеру, либо воспользоваться функцией онлайн-оплаты и получить <span class="shipping__discount">скидку&nbsp;5%.</span>
+                    </p>
+                    <ul class="shipping__payment">
+                        <li class="payment-item"><a class="payment-link" href="#"></a></li>
+                        <li class="payment-item"><a class="payment-link" href="#"></a></li>
+                        <li class="payment-item"><a class="payment-link" href="#"></a></li>  
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <div class="bottom-section">
+        <section class="contact">
+            <div class="container">
+                <div class="contact__box">
+                    <div class="contact__item">
+                        <h1 class="title">
+                            Не смогли <span class="title__span">определиться?</span>
+                        </h1>
+                        <div class="contact__text">
+                            <p class="description description_size_s">
+                                Если у вас остались вопросы, вы можете отправить нам ваши данные. Наши менеджеры свяжутся с вами в течение рабочего дня.
+                            </p>
+                            <ul class="contact__list">
+                                <li class="contact__list-item"><a class="contact__link" href="tel:+79453425555">+7 945 342 55 55</a></li>
+                                <li class="contact__list-item"><a class="contact__link" href="mailto:healthyfood@mail.ru">healthyfood@mail.ru</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 class="card__title">Свяжитесь с нами</h3>
+                        <form>
+                            <label class="card__label">Ваше имя</label>
+                            <input class="card__input" type="text" placeholder="Ваше имя">
+                            <label class="card__label">Ваш телефон</label>
+                            <input class="card__input" type="text" placeholder="Ваш телефон">
+                            <button type="submit" class="card__submit">Заказать звонок</button>
+                            <p class="card__check">Нажимая на кнопку вы подтверждаете своё согласие на обработку <a class="card__link" href="#">персональных данных</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="footer__box">
+                    <a class="logo footer__logo" href="#"></a>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">Наша продукция</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">Новинки</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">Доставка</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            Москва, ул. Ленинградская&nbsp;64
+                        </li>
+                        <li class="footer__item">
+                            пн-пт с&nbsp;09:00 до&nbsp;21:00
+                        </li>
+                        <li class="footer__item">
+                            сб-вс с&nbsp;09:00 до&nbsp;19:00
+                        </li>
+                    </ul>
+                    <div class="footer__contact">
+                        <a class="footer__tel" href="tel:+79453425555">+7 945 342 55 55</a>
+                        <a class="footer__mail" href="mailto:healthyfood@mail.ru">e-mail: healthyfood@mail.ru</a>
+                        <ul class="footer-social">
+                            <li class="footer-social__item">
+                                <a href="#" target="_black" class="footer-social__link footer-social__vk"></a>
+                            </li>
+                            <li class="footer-social__item">
+                                <a href="#" target="_black" class="footer-social__link footer-social__inst"></a>
+                            </li>
+                            <li class="footer-social__item">
+                                <a href="#" target="_black" class="footer-social__link footer-social__fb"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__text">
+                    <p>&copy; 2020, Все права защищены</p>
+                    <p>Сделано в рамках курса учебной платформы <a class="footer__author" href="#">Annblok</a></p=>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
