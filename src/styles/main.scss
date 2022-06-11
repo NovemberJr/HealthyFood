@@ -74,6 +74,9 @@ body {
             color: $orange;
         }
     }
+    &__cart-wrap {
+        position: relative;
+    }
     &__cart {
         display: block;
         width: 4rem;
@@ -90,6 +93,9 @@ body {
         &:hover {
             background-color: $green;
             border-color: $green;
+        }
+        &:focus {
+            outline: none;
         }
     }
     &__counter {
@@ -152,7 +158,7 @@ body {
     position: relative;
     z-index: 0;
     height: 1076px;
-    overflow: hidden;
+    overflow-x: clip;
     &__item {
         margin-left: 12rem;
         max-width: 37.8rem;
@@ -812,6 +818,7 @@ footer {
         text-decoration: none;
         color: rgba($green, .6);
         position: relative;
+        transition: .2s;
         &::after {
             content: '';
             display: block;
@@ -821,7 +828,12 @@ footer {
             position: absolute;
             left: 0;
             bottom: 3px;
-            transition: .3;
+        }
+        &:hover {
+            color: rgba($green, 1);
+            &::after {
+                background-color: $green;
+            }
         }
     }
 }
@@ -930,8 +942,8 @@ footer {
     &__desc {
         color: rgba($green, .6);
         font-size: 1.4rem;
-        max-width: 170px;
-        margin: 2px 0 0 3rem
+        /*max-width: 170px;*/
+        margin: 2px 2.5rem 0 3rem
     }
     &__price {
         margin: 1rem 0 2.8rem 3rem;
@@ -1098,6 +1110,11 @@ footer {
         color: rgba($green, 0.6);
         text-decoration: none;
         border-bottom: 1px solid #ecedec;
+        transition: .2s;
+        &:hover {
+            color: rgba($green, 1);
+            border-color: $green;
+        }
     }
     /*    display: flex;
         flex-direction: column;
