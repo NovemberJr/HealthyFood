@@ -440,11 +440,15 @@ body {
     }
     &-button-prev, &-button-next {
         top: -60px;
-        color: #000;
+        color: rgba($green, .6);
+        transition: .2s;
         transform: scale(0.5);
+        &:hover {
+            color: rgba($green, 1);
+        }
     }
     &-button-next {
-        right: -8px;
+        right: -7px;
     }
     &-button-prev {
         left: initial;
@@ -705,10 +709,7 @@ body {
     background-image: url(../images/background\ end.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    height: 1317px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    /*height: 1317px;*/
 }
 .contact {
     padding-top: 6.8rem;
@@ -760,6 +761,7 @@ body {
 }
 footer {
     border-top: 1px solid #e2e3df;
+    margin-top :16rem;
 }
 .footer {
     &__box {
@@ -769,9 +771,10 @@ footer {
         margin-top: 7.5rem;
     }
     &__logo {
-        width: 17.9rem;
-        height: 5rem;
+        flex-basis: 30rem;
+        height: 4.7rem;
         margin-top: 1rem;
+        transform-origin: left;
     }
     &__list {
         list-style-type: none;
