@@ -237,6 +237,9 @@ body {
                 display: block;
             }
         }
+        &:focus {
+            outline: none;
+        }
         &::before {
             content: '';
             border-radius: 100%;
