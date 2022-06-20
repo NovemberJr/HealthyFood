@@ -10,9 +10,8 @@ $font-jost: 'Jost', sans-serif;
 
 $r_minmob: 320px;
 $r_mob360: 360px;
-$r_mob400: 400px;
+$r_mob400: 414px;
 $r_mob500: 500px;
-$r_mob600: 600px;
 $r_tab: 768px;
 $r_tab_900: 900px;
 $r_desc: 1000px;
@@ -26,6 +25,9 @@ $r_desc_1750: 1750px;
 
 html {
     font-size: 10px;
+    @media (max-width: $r_mob500) {
+        font-size: 8px;
+    }
 }
 body {
     font-size: 1.6rem;
@@ -97,6 +99,9 @@ body {
     &__button-box {
         display: flex;
         gap: 2rem;
+        @media (max-width: $r_mob500) {
+            gap: 11px;
+        }
     }
     &__button {
         width: 4rem;
@@ -109,6 +114,10 @@ body {
         background-size: 1.7rem 1.5rem;
         opacity: .8;
         transition: .2s;
+        @media (max-width: $r_mob500) {
+            width: 36px;
+            height: 36px;
+        }
         &_cart {
             background-image: url(../icons/cart-black.svg);
             cursor: pointer;
@@ -132,8 +141,12 @@ body {
         }
         &_phone {
             background-image: url(../icons/tel.svg);
+            box-sizing: border-box;
             @media (max-width: $r_desc_hd) {
                 display: block;
+            }
+            @media (max-width: $r_mob500) {
+                background-size: 1.8rem 1.8rem;
             }
         }
         &_menu {
@@ -142,13 +155,16 @@ body {
             @media (max-width: $r_desc) {
                 display: block;
             }
+            @media (max-width: $r_mob500) {
+                background-size: 2rem 2rem;
+            }
         }
         &:hover {
             opacity: 1;
         }
     }
     &__counter {
-        font-size: .8rem;
+        font-size: 8px;
         color: $white;
         position: absolute;
         top: .6rem;
@@ -296,6 +312,9 @@ body {
                 display: block;
                 
             }
+            @media (max-width: $r_mob400) {
+                max-width: 220px;
+            }
         }
     }
     &__btn-wrap {
@@ -309,13 +328,13 @@ body {
         }
         &_2 {
             top: 190px;
-            right: 75px;
+            right: 90px;
             @media (max-width: $r_desc_1350) {
                 top: 107px;
             }
         }
         &_3 {
-            bottom: -2px;
+            bottom: 8px;
             right: 303px;
             @media (max-width: $r_desc_1350) {
                 bottom: -12px;
@@ -361,14 +380,16 @@ body {
         &_1 {    
             &::before {
                 top: 24px;
-                right: -36px;
+                right: -11px;
             }
+            padding-right: 25px;
         }
         &_2 {
             &::before {
                 top: 20px;
-                left: -26px;
+                left: -11px;
             }
+            padding-left: 15px;
             &+.popup {
                 @media (max-width: $r_desc_1650) {
                     left: -160px;
@@ -377,9 +398,10 @@ body {
         }
         &_3 {             
             &::before {
-                top: -20px;
+                top: -10px;
                 left: 17px;    
             }
+            padding-top: 10px;
         }
     }
     &__food {
@@ -420,6 +442,12 @@ body {
         @media (max-width: $r_desc_1750) {
             display: none;
         }
+        @media (max-width: $r_mob500) {
+            display: block;
+            width: 6rem;
+            top: 295px;
+            left: 0px;
+        }
     }
     &__beans {
         position: absolute;
@@ -458,6 +486,10 @@ body {
     padding-top: 2rem;
     @media (max-width: $r_desc) {
         height: 800px;
+        background-image: none;
+    }
+    @media (max-width: $r_mob500) {
+        height: 580px;
         background-image: none;
     }
     &__text {
@@ -632,6 +664,9 @@ body {
             @media (max-width: $r_desc) {
                 max-height: 400px;
             }
+            @media (max-width: $r_mob500) {
+                max-height: 300px;
+            }
             &::after {
                 content: '';
                 display: block;
@@ -690,6 +725,9 @@ body {
         right: 74px;
     }
 }
+.offer .swiper-slide {
+    text-align: left;
+}
 .offer .swiper-horizontal>.swiper-pagination-bullets {
     margin-bottom: 50px;
 }
@@ -709,6 +747,10 @@ body {
     @media (max-width: $r_desc) {
         text-align: center;
         background-image: url(../images/background\ 3\ screen\ mob.png);
+    }
+    @media (max-width: $r_mob500) {
+        height: 410px;
+        background-image: none;
     }
     &__box {
         display: flex;
@@ -814,6 +856,9 @@ body {
         height: 890px;
         background-image: none;;
     }
+    @media (max-width: $r_mob500) {
+        height: 675px;
+    }
     &__text {
         margin-top: 4rem;
         @media (max-width: $r_desc) {
@@ -854,6 +899,9 @@ body {
     & li {
         flex-basis: 230px;
         text-align: center;
+        @media (max-width: $r_tab) {
+            flex-basis: 200px;
+        }
     }
     &__link {
         text-decoration: none;
@@ -877,6 +925,10 @@ body {
     padding-top: 5.7rem;
     @media (max-width: $r_desc) {
         background-image: none;
+    }
+    @media (max-width: $r_mob500) {
+        height: initial;
+        padding-bottom: 50px;
     }
     & .title {
         @media (max-width: $r_desc) {
@@ -906,16 +958,26 @@ body {
         @media (max-width: $r_tab) {
             max-height: 995px;
         }
+        @media (max-width: $r_mob500) {
+            gap: 10px;
+        }
         &__item {
             border: 1px solid grey;
             border-radius: 2rem;
-            padding: 3rem 3rem 4rem 3rem;
+            padding: 3rem 3rem 4rem;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             @media (max-width: $r_desc) {
                 text-align: center;
                 align-items: center;
+                display: none;
+            }
+            @media (max-width: $r_tab) {
+                padding: 1rem 2rem 3rem;
+            }
+            &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+                display: flex;
             }
         }
         &__cover {
@@ -936,6 +998,9 @@ body {
             color: $green;
             margin-bottom: 0;
             margin-top: 1rem;
+            @media (max-width: $r_mob500) {
+                font-size: 2rem;
+            }
         }
         &__description {
             line-height: 1.5;
@@ -944,6 +1009,9 @@ body {
             margin-bottom: 0;
             @media (max-width: $r_desc) {
                 color: rgba($green, 0.4);
+            }
+            @media (max-width: $r_mob500) {
+                font-size: 1.5rem;
             }
         }
         &__price {
@@ -999,6 +1067,10 @@ body {
         text-align: center;
         height: 510px;
         background-image: url(../images/background\ 6\ screen\ \ mob.png);
+    }
+    @media (max-width: $r_mob500) {
+        height: initial;
+        padding-bottom: 50px;
     }
     &__flex {
         display: flex;
@@ -1138,6 +1210,12 @@ body {
             flex-direction: row;
             gap: 50px;
         }
+        @media (max-width: $r_tab) {
+            font-size: 1.7rem;
+        }
+        @media (max-width: $r_mob500) {
+            justify-content: space-around;
+        }
     }
     &__list-item:nth-child(1) &__link::before {
         background-image: url(../icons/phone.svg);
@@ -1186,6 +1264,9 @@ footer {
     margin-top: 16rem;
     @media (max-width: $r_desc) {
         margin-top: 12rem;
+    }
+    @media (max-width: $r_mob500) {
+        margin-top: 8rem;
     }
 }
 .footer {
@@ -1359,11 +1440,17 @@ footer {
         @media (max-width: $r_desc_1280) {
             font-size: 1.6rem;
         }
+        @media (max-width: $r_tab) {
+            font-size: 1.6rem;
+        }
     }
     &_size_m {
         font-size: 2.4rem;
         @media (max-width: $r_desc_1280) {
             font-size: 2.2rem;
+        }
+        @media (max-width: $r_tab) {
+            font-size: 1.8rem;
         }
     }
 }
