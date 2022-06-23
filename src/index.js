@@ -73,3 +73,21 @@ var swiper = new Swiper(".trendsSwiper", {
     }
   }
 });
+/*
+var swiper = new Swiper(".categorySwiper", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  slidesPerGroup: 1,
+  slidesOffsetAfter: 50,
+  loop: true,
+  loopFillGroupWithBlank: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  modules: [ Navigation, Pagination ]
+});*/

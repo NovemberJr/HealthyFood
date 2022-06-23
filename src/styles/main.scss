@@ -48,6 +48,9 @@ body {
     @media (max-width: $r_desc_hd) {
         justify-content: space-between;
     }
+    @media (max-width: $r_mob360) {
+        margin-bottom: 4.5rem;
+    }
     &__navigation {
         flex-grow: 1;
         margin-left: 5rem;
@@ -189,6 +192,9 @@ body {
 
     &:hover {
         transform: scale(1.1);
+        @media (max-width: $r_mob500) {
+            transform: none;
+        }
     }
 }
 .container {
@@ -216,6 +222,9 @@ body {
     @media (max-width: $r_tab) {
         background-image: url(../images/background\ 1\ screen\ mob.png);
     }
+    @media (max-width: $r_mob360) {
+        height: 616px;
+    }
     &__text {
         @media (max-width: $r_desc) {
             flex-basis: 400px;
@@ -238,6 +247,9 @@ body {
         @media (max-width: $r_tab) {
             margin: 4rem auto 0;
             max-width: initial;
+        }
+        @media (max-width: $r_mob360) {
+            margin-top: 2.3rem;
         }
     }
     &__link {
@@ -419,6 +431,9 @@ body {
             left: initial;
             right: -28px;
         }
+        @media (max-width: $r_mob360) {
+            top: 454px;
+        }
     }
     &__avocado {
         position: absolute;
@@ -448,6 +463,11 @@ body {
             top: 295px;
             left: 0px;
         }
+        @media (max-width: $r_mob360) {
+            width: 4rem;
+            top: 248px;
+            left: -2px;
+        }
     }
     &__beans {
         position: absolute;
@@ -476,6 +496,10 @@ body {
             top: 100px;
             left: -45px;
         }
+        @media (max-width: $r_mob360) {
+            transform: scale(0.5) rotate(70deg);
+            top: 50px;
+        }
     }
 }
 .offer {
@@ -489,8 +513,11 @@ body {
         background-image: none;
     }
     @media (max-width: $r_mob500) {
-        height: 580px;
+        height: 515px;
         background-image: none;
+    }
+    @media (max-width: $r_mob360) {
+        height: 497px;
     }
     &__text {
         margin-top: 6rem;
@@ -520,38 +547,13 @@ body {
     @media (max-width: $r_tab) {
         padding-top: 40px;
     }
+    @media (max-width: $r_mob500) {
+        margin: 0 calc(50% - 105px);
+    }
 }
 .swiper {
     overflow: initial;
     &-slide {
-        height: 52rem;
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        border: 1px solid rgba($green, 0.4);
-        border-radius: 2rem;
-        box-sizing: border-box;
-        padding: 40px 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        position: relative;
-        @media (max-width: $r_desc) {
-            text-align: center;
-        }
-        @media (max-width: $r_tab_900) {
-            padding: 3rem 3rem;
-        }
-        &:hover {
-            box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
-            .swiper-slide__hover {
-                height: auto;
-                transition: 0.3s;
-            }
-            &::after {
-                opacity: .55;
-            }
-        }
         &__title {
             font-family: $font-cormorant;
             font-size: 30px;
@@ -562,11 +564,17 @@ body {
             @media (max-width: $r_desc) {
                 font-size: 2.4rem;
             }
+            @media (max-width: $r_mob500) {
+                font-size: 1.75rem;
+            }
         }
         &__hover {
             height: 0;
             overflow: hidden;
             z-index: 1;
+            @media (max-width: $r_mob500) {
+                height: auto;
+            }
         }
         &__text {
             font-size: 16px;
@@ -579,6 +587,9 @@ body {
                 color: rgba($green, 0.4);
                 margin-top: 1.5rem;
                 max-width: initial;
+            }
+            @media (max-width: $r_mob500) {
+                display: none;
             }
         }
         &__link {
@@ -596,6 +607,12 @@ body {
             @media (max-width: $r_desc) {
                 font-size: 1.5rem;
             }
+            @media (max-width: $r_mob500) {
+                justify-content: center;
+                margin-top: 20px;
+                font-size: 1.1rem;
+                gap: 1rem;
+            }
             &::before {
                 content: '';
                 display: block;
@@ -604,6 +621,10 @@ body {
                 background: url(../icons/plus.svg);
                 background-size: cover;
                 background-repeat: no-repeat;
+                @media (max-width: $r_mob500) {
+                    width: 20px;
+                    height: 20px;
+                }
             }
             &:hover {
                 opacity: 1;
@@ -665,7 +686,7 @@ body {
                 max-height: 400px;
             }
             @media (max-width: $r_mob500) {
-                max-height: 300px;
+                max-height: 240px;
             }
             &::after {
                 content: '';
@@ -725,11 +746,55 @@ body {
         right: 74px;
     }
 }
+.offer .swiper-slide,
+.trends .swiper-slide {
+    height: 52rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid rgba($green, 0.4);
+    border-radius: 2rem;
+    box-sizing: border-box;
+    padding: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+    @media (max-width: $r_desc) {
+        text-align: center;
+    }
+    @media (max-width: $r_tab_900) {
+        padding: 3rem 3rem;
+    }
+    @media (max-width: $r_mob500) {
+        height: 240px;
+        width: 210px;
+        padding: 2rem;
+        background-size: auto 170px;
+        background-position: 20% 0;
+    }
+    &:hover {
+        box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
+        .swiper-slide__hover {
+            height: auto;
+            transition: 0.3s;
+        }
+        &::after {
+            opacity: .55;
+        }
+    }
+}
 .offer .swiper-slide {
     text-align: left;
+    @media (max-width: $r_mob500) {
+        text-align: center;
+    }
 }
 .offer .swiper-horizontal>.swiper-pagination-bullets {
     margin-bottom: 50px;
+    @media (max-width: $r_mob500) {
+        margin-bottom: -50px;
+    }
 }
 .trends .swiper-horizontal>.swiper-pagination-bullets {
     margin-bottom: -50px;
@@ -751,6 +816,9 @@ body {
     @media (max-width: $r_mob500) {
         height: 410px;
         background-image: none;
+    }
+    @media (max-width: $r_mob360) {
+        height: 359px;
     }
     &__box {
         display: flex;
@@ -803,6 +871,9 @@ body {
         }
         @media (max-width: $r_desc) {
             padding: 0;
+        }
+        @media (max-width: $r_mob360) {
+            gap: 1rem;
         }
     }
     &__item {
@@ -859,11 +930,17 @@ body {
     @media (max-width: $r_mob500) {
         height: 675px;
     }
+    @media (max-width: $r_mob500) {
+        height: 550px;
+    }
     &__text {
         margin-top: 4rem;
         @media (max-width: $r_desc) {
             margin: 4rem auto 0;
             text-align: center;
+        }
+        @media (max-width: $r_mob360) {
+            margin-top: 2.4rem;
         }
     }
     & .title {
@@ -896,11 +973,19 @@ body {
     @media (max-width: $r_desc) {
         justify-content: center;
     }
+    @media (max-width: $r_mob500) {
+        //display: none;
+        margin-top: 5rem;
+        gap: 10px;
+    }
     & li {
         flex-basis: 230px;
         text-align: center;
         @media (max-width: $r_tab) {
             flex-basis: 200px;
+        }
+        @media (max-width: $r_mob500) {
+            flex-basis: 108px;
         }
     }
     &__link {
@@ -911,11 +996,48 @@ body {
         border-radius: 35px;
         letter-spacing: 0.1rem;
         color: $green;
+        @media (max-width: $r_mob500) {
+            font-size: 1rem;
+            padding: 14px 0;
+        }
         &:hover {
             color: $orange;
             border-color: $orange;
         }
     }
+    &-slide {
+        height: auto;
+        border: initial;
+        display: inline-block;
+        padding: 0;
+        width: 108px;
+        &:hover {
+            box-shadow: none;
+            /*.swiper-slide__hover {
+                height: auto;
+                transition: 0.3s;
+            }
+            &::after {
+                opacity: .55;
+            }*/
+        }
+    }
+    &__slide {
+        display: inline-block;
+        font-size: 1rem;
+        letter-spacing: initial;
+        text-align: center;
+        width: 108px;
+        padding: 14px 0;
+    }
+}
+.categorySwiper {
+    margin-top: 4.9rem;
+}
+.categorySwiper .swiper-pagination,
+.categorySwiper .swiper-button-next,
+.categorySwiper .swiper-button-prev {
+    display: none;
 }
 .catalog {
     background-image: url(../images/background\ 5\ screen.png);
@@ -976,6 +1098,9 @@ body {
             @media (max-width: $r_tab) {
                 padding: 1rem 2rem 3rem;
             }
+            @media (max-width: $r_mob360) {
+                padding: 1rem 1rem 2rem;
+            }
             &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
                 display: flex;
             }
@@ -983,6 +1108,9 @@ body {
         &__cover {
             max-height: 209px;
             text-align: center;
+            @media (max-width: $r_mob500) {
+                max-height: 100px;
+            }
         }
         &__image {
             object-fit: scale-down;
@@ -998,8 +1126,11 @@ body {
             color: $green;
             margin-bottom: 0;
             margin-top: 1rem;
-            @media (max-width: $r_mob500) {
+            @media (max-width: $r_tab) {
                 font-size: 2rem;
+            }
+            @media (max-width: $r_mob500) {
+                font-size: 1.8rem;
             }
         }
         &__description {
@@ -1010,19 +1141,31 @@ body {
             @media (max-width: $r_desc) {
                 color: rgba($green, 0.4);
             }
+            @media (max-width: $r_tab) {
+                font-size: 1.2rem;
+            }
             @media (max-width: $r_mob500) {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             }
         }
         &__price {
             font-size: 2.4rem;
             margin-top: 1.3rem;
             margin-bottom: 0;
+            @media (max-width: $r_tab) {
+                font-size: 1.8rem;
+            }
+            @media (max-width: $r_mob500) {
+                font-size: 1.5rem;
+            }
         }
         &__footer {
             display: flex;
             justify-content: space-between;
             margin-top: 3rem;
+            @media (max-width: $r_mob360) {
+                margin-top: 2rem;
+            }
         }
         &__counter {
             max-width: 30px;
@@ -1041,6 +1184,10 @@ body {
             transition: .2s;
             @media (max-width: $r_desc) {
                 padding: 0 4rem;
+            }
+            @media (max-width: $r_mob500) {
+                font-size: 1.2rem;
+                padding: 0 3rem;
             }
             &:hover {
                 background-color: $dark-orange;
@@ -1130,6 +1277,9 @@ body {
         @media (max-width: $r_desc) {
             justify-content: center;
         }
+        @media (max-width: $r_mob500) {
+            gap: 20px;
+        }
     }
     &__link {
         color: $green;
@@ -1155,6 +1305,10 @@ body {
     height: 32px;
     opacity: .4;
     transition: .4s;
+    @media (max-width: $r_mob500) {
+        height: 23px;
+        background-size: contain;
+    }
     &:hover {
         opacity: 1;
         transform: scale(1.05);
@@ -1163,15 +1317,24 @@ body {
 .payment-item:nth-child(1) a {
     background-image: url(../images/mastercard.png);
     width: 53px;
+    @media (max-width: $r_mob500) {
+        width: 40px;
+    }
 }
 .payment-item:nth-child(2) a {
     background-image: url(../images/visa.png);
     width: 74px;
+    @media (max-width: $r_mob500) {
+        width: 55px;
+    }
 }
 .payment-item:nth-child(3) a {
     background-image: url(../images/paypal.png);
     background-position-y: 90%;
     width: 87px;
+    @media (max-width: $r_mob500) {
+        width: 63px;
+    }
 }
 .bottom-section {
     background-image: url(../images/background\ end.png);
@@ -1184,6 +1347,9 @@ body {
 }
 .contact {
     padding-top: 6.8rem;
+    @media (max-width: $r_mob500) {
+        padding-top: 0;
+    }
     &__box {
         display: flex;
         justify-content: space-between;
@@ -1191,6 +1357,9 @@ body {
         @media (max-width: $r_desc) {
             flex-direction: column;
             gap: 10rem;
+        }
+        @media (max-width: $r_mob500) {
+            gap: 6rem;
         }
     }
     &__list {
@@ -1215,15 +1384,27 @@ body {
         }
         @media (max-width: $r_mob500) {
             justify-content: space-around;
+            gap: initial;
+        }
+        @media (max-width: $r_mob360) {
+            justify-content: space-between;
         }
     }
     &__list-item:nth-child(1) &__link::before {
         background-image: url(../icons/phone.svg);
         height: 26px;
+        @media (max-width: $r_mob500) {
+            width: 18px;
+            height: 16px;
+        }
     }
     &__list-item:nth-child(2) &__link::before {
         background-image: url(../icons/mail.svg);
         height: 21px;
+        @media (max-width: $r_mob500) {
+            width: 18px;
+            height: 12px;
+        }
     }
     &__link {
         text-decoration: none;
@@ -1233,6 +1414,9 @@ body {
             display: inline-block;
             width: 29px;
             background-repeat: no-repeat;
+            @media (max-width: $r_mob500) {
+                background-size: cover;
+            }
             /*background-position-y: center;*/
         }
         display: flex;
@@ -1240,6 +1424,10 @@ body {
         gap: 30px;
         @media (max-width: $r_desc) {
             gap: 20px;            
+        }
+        @media (max-width: $r_mob500) {
+            font-size: 1.5rem;
+            gap: 9px;
         }
     }
     &__item {
@@ -1295,6 +1483,9 @@ footer {
             width: 20rem;
             transform-origin: center;
         }
+        @media (max-width: $r_mob500) {
+            width: 15rem;
+        }
     }
     &__list {
         list-style-type: none;
@@ -1309,6 +1500,9 @@ footer {
                 flex-direction: row;
                 gap: 5rem;
             }
+        }
+        @media (max-width: $r_mob360) {
+            font-size: 1.2rem;
         }
     }
     &__link {
@@ -1346,6 +1540,9 @@ footer {
             flex-direction: column;
             align-items: center;
             margin-bottom: 4.5rem;
+        }
+        @media (max-width: $r_mob360) {
+            font-size: 1.2rem;
         }
     }
     &__author {
@@ -1419,6 +1616,9 @@ footer {
     }
     @media (max-width: $r_tab) {
         max-width: initial;
+    }
+    @media (max-width: $r_mob360) {
+        font-size: 3.75rem;
     }
     &__span {
         font-style: italic;
@@ -1711,11 +1911,6 @@ footer {
             border-color: $green;
         }
     }
-    /*    display: flex;
-        flex-direction: column;
-        width: 585px;
-        height: 500px;
-    */
 }
 
 @keyframes shadow {
