@@ -40,10 +40,10 @@
                     <button class="header__button header__button_cart">
                         <span class="header__counter">0</span>
                     </button>
-                    <div class="popup popup_visible">
+                    <div class="popup popup_visible"  id="cart-popup-close">
                         <img class="popup__image" src="./images/catalog/milk.png" alt="">
                         <p class="popup__text">Вы добавили в&nbsp;корзину <span class="popup__text_underline">Молоко&nbsp;топленое</span></p>
-                        <div class="popup__close"></div>
+                        <div class="popup__close" onclick="closePopup()"></div>
                     </div>
                 </div> 
             </div>
@@ -603,5 +603,10 @@
             </div>
         </footer>
     </div>
+    <script>
+        function closePopup() {
+            document.getElementById("cart-popup-close").style.display = "none";
+        }
+    </script>
 </body>
 </html>

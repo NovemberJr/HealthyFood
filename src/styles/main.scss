@@ -1315,21 +1315,21 @@ body {
     }
 }
 .payment-item:nth-child(1) a {
-    background-image: url(../images/mastercard.png);
+    background-image: url(../icons/mastercard.svg);
     width: 53px;
     @media (max-width: $r_mob500) {
         width: 40px;
     }
 }
 .payment-item:nth-child(2) a {
-    background-image: url(../images/visa.png);
+    background-image: url(../icons/visa.svg);
     width: 74px;
     @media (max-width: $r_mob500) {
         width: 55px;
     }
 }
 .payment-item:nth-child(3) a {
-    background-image: url(../images/paypal.png);
+    background-image: url(../icons/paypal.svg);
     background-position-y: 90%;
     width: 87px;
     @media (max-width: $r_mob500) {
