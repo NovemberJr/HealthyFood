@@ -50,7 +50,7 @@ body {
         justify-content: space-between;
     }
     @media (max-width: $r_mob500) {
-        padding-top: 2rem;
+        padding-top: 2.5rem;
         margin-bottom: 3rem;
     }
     &__navigation {
@@ -431,6 +431,9 @@ body {
             left: initial;
             right: -28px;
         }
+        @media (max-width: $r_mob400) {
+            top: 555px;
+        }
         @media (max-width: $r_mob360) {
             top: 454px;
         }
@@ -440,6 +443,7 @@ body {
         z-index: -1;
         top: 47px;
         right: -21px;
+        display: none;
         @media (max-width: $r_desc_1750) {
             width: 13rem;
             top: 115px;
@@ -937,7 +941,7 @@ body {
         height: 675px;
     }
     @media (max-width: $r_mob500) {
-        height: 550px;
+        height: auto;
     }
     &__text {
         margin-top: 4rem;
@@ -961,13 +965,19 @@ body {
     @media (max-width: $r_desc_hd) {
         height: auto;
     }
+    @media (max-width: $r_mob500) {
+        max-height: 300px;
+    }
     & img {
         width: 75%;
+        object-fit: scale-down;
+        max-height: 280px;
         @media (max-width: $r_desc_hd) {
             width: 65%;
         }
-        object-fit: scale-down;
-        max-height: 280px;
+        @media (max-width: $r_mob500) {
+            max-height: 130px;
+        }
     }
 }
 .category {
